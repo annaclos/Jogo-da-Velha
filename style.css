@@ -1,0 +1,37 @@
+#jogo{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 120px 120px 120px;  
+    grid-template-rows: 120px 120px 120px;
+    justify-content: center;
+
+}
+
+#jogo div {
+    background-color: rgb(144, 54, 222);
+    border: 3px solid white;
+    font-size: 80px;
+    color: #000000;
+    border-radius: 10px 10px 10px 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+ #title, #jogadors{
+    text-align: center;
+ }
+
+ #reiniciar{
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding: 10px 30px;
+    border: none;
+    background-color: rgb(144, 54, 222);
+    border-radius: 3px;
+    color: #eee;
+    cursor: pointer;
+ }
+
+ #reiniciar:hover{
+    background-color: rgb(202, 158, 240);
+    }
