@@ -7,9 +7,11 @@ let vitorias = {
     O: 0
 };
 
+let ultimoVencedor = "X"; // Começa com X por padrão
+
 function iniciarJogo() {
     jogadas = 0;
-    jogador = "X";
+    jogador = ultimoVencedor; // O último vencedor começa
     document.querySelector("#jogadorDoTurno").textContent = jogador;
     document.getElementById("vencedor").innerText = ""; 
 
@@ -65,7 +67,6 @@ function marcarCampo(event) {
         }
 
         if (conferirResultado(classes)) return;
-
         if (verificarEmpate()) return;
 
         trocarJogador();
@@ -80,19 +81,16 @@ function trocarJogador() {
 function conferirResultado(classes) {
     for (let classe of classes) {
         if (pontuacao[jogador][classe] === 3) {
-          
             vitorias[jogador]++;
-            atualizarPlacar();
+            ultimoVencedor = jogador; // Define quem venceu por último
 
-           
+            atualizarPlacar();
             document.getElementById('vencedor').innerText = "Jogador " + jogador + " venceu!!";
 
-         
             setTimeout(function() {
                 alert("Jogador " + jogador + " venceu!!");
             }, 100); 
 
-           
             removerEventosDosCampos();
             return true;
         }
@@ -103,17 +101,20 @@ function conferirResultado(classes) {
 function verificarEmpate() {
     if (jogadas >= 9) {
         alert("Deu velha!!");
-
         document.getElementById('vencedor').innerText = "Deu velha!!";
 
         removerEventosDosCampos();
+
+        // Se quiser alternar o jogador no empate, descomente as 2 linhas abaixo:
+        // trocarJogador();
+        // ultimoVencedor = jogador;
+
         return true;
     }
     return false;
 }
 
 function atualizarPlacar() {
-
     document.getElementById("vitoriasX").textContent = vitorias.X;
     document.getElementById("vitoriasO").textContent = vitorias.O;
 }
