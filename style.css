@@ -32,6 +32,25 @@
     cursor: pointer;
  }
 
+ #placar {
+    margin: auto;
+    display: flex;               
+    justify-content: center;     
+    gap: 40px;                   
+    padding: 10px 30px;
+    border-radius: 3px;
+    color: #000000;
+    cursor: default;             
+}
+
+#placar p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
  #reiniciar:hover{
     background-color: rgb(202, 158, 240);
     }
+#vencedor {
+    display: none;}

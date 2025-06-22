@@ -10,30 +10,34 @@
 </head>
 
 <body>
-    
-        <h1 id="title">Jogo da Velha</h1>
+    <h1 id="title">Jogo da Velha</h1>
+
+    <section id="jogo">
+
+        <div class="campo linha1 coluna1 diagonal1"></div>
+        <div class="campo linha1 coluna2"></div>
+        <div class="campo linha1 coluna3 diagonal2"></div>
+
+        <div class="campo linha2 coluna1"></div>
+        <div class="campo linha2 coluna2 diagonal1 diagonal2"></div>
+        <div class="campo linha2 coluna3"></div>
+
+        <div class="campo linha3 coluna1 diagonal2"></div>
+        <div class="campo linha3 coluna2"></div>
+        <div class="campo linha3 coluna3 diagonal1"></div>
+    </section>
+
+    <div id="placar">
+  <p>O: <span id="vitoriasO">0</span></p>
+  <p>X: <span id="vitoriasX">0</span></p>
+</div>
 
 
-        <section id="jogo">
-            <!-- linha -->
-            <div class="linha1 coluna1 diagonal1"></div>
-            <div class="linha1 coluna2"></div>
-            <div class="linha1 coluna3 diagonal2"></div>
-            <!-- linha -->
-            <div class="linha2 coluna1"></div>
-            <div class="linha2 coluna2 diagonal1 diagonal2"></div>
-            <div class="linha2 coluna3"></div>
-            <!-- linha -->
-            <div class="linha3 coluna1 diagonal2"></div>
-            <div class="linha3 coluna2"></div>
-            <div class="linha3 coluna3 diagonal1"></div>
-        </section>
+    <h3 id="jogadors">Jogador: <span id="jogadorDoTurno"></span></h3>
 
+   <h3 id="vencedor"></h3>
 
-        <h3 id="jogadors">Jogador: <span id="jogadorDoTurno"></span></h3>
-        
-        <button id="reiniciar">Reiniciar</button>
-
+    <button id="reiniciar">Reiniciar</button>
 
     <script src="script.js"></script>
 </body>
