@@ -1,45 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jogo da Velha</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <h1 id="title">Jogo da Velha</h1>
+  <h1 id="title">Jogo da Velha</h1>
 
-    <section id="jogo">
+  <section id="jogo">
+    <div class="campo linha1 coluna1 diagonal1"></div>
+    <div class="campo linha1 coluna2"></div>
+    <div class="campo linha1 coluna3 diagonal2"></div>
 
-        <div class="campo linha1 coluna1 diagonal1"></div>
-        <div class="campo linha1 coluna2"></div>
-        <div class="campo linha1 coluna3 diagonal2"></div>
+    <div class="campo linha2 coluna1"></div>
+    <div class="campo linha2 coluna2 diagonal1 diagonal2"></div>
+    <div class="campo linha2 coluna3"></div>
 
-        <div class="campo linha2 coluna1"></div>
-        <div class="campo linha2 coluna2 diagonal1 diagonal2"></div>
-        <div class="campo linha2 coluna3"></div>
+    <div class="campo linha3 coluna1 diagonal2"></div>
+    <div class="campo linha3 coluna2"></div>
+    <div class="campo linha3 coluna3 diagonal1"></div>
+  </section>
 
-        <div class="campo linha3 coluna1 diagonal2"></div>
-        <div class="campo linha3 coluna2"></div>
-        <div class="campo linha3 coluna3 diagonal1"></div>
-    </section>
+  <div id="placar">
+    <p>O: <span id="vitoriasO">0</span></p>
+    <p>X: <span id="vitoriasX">0</span></p>
+  </div>
 
-    <div id="placar">
-  <p>O: <span id="vitoriasO">0</span></p>
-  <p>X: <span id="vitoriasX">0</span></p>
-</div>
+  <h3 id="jogadors">Jogador: <span id="jogadorDoTurno"></span></h3>
 
+  <h3 id="vencedor"></h3>
 
-    <h3 id="jogadors">Jogador: <span id="jogadorDoTurno"></span></h3>
+  <button id="reiniciar">Reiniciar</button>
 
-   <h3 id="vencedor"></h3>
-
-    <button id="reiniciar">Reiniciar</button>
-
-    <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
