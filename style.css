@@ -8,7 +8,7 @@
 }
 
 #jogo div {
-    background-color: rgb(204, 150, 252);
+    background-color:pink;
     border: 3px solid black;
     font-size: 80px;
     color: #000000;
@@ -39,7 +39,7 @@
     gap: 40px;                   
     padding: 10px 30px;
     border-radius: 3px;
-    color: white;
+    color: rgb(68, 66, 66);
     cursor: default;             
 }
 
