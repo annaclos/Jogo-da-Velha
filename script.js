@@ -183,7 +183,8 @@ function removerEventosDosCampos() {
 
 function marcarCampo(event) {
     if (event.target.textContent === "") {
-        event.target.textContent = jogador;  
+        event.target.textContent = jogador; 
+        event.target.style.color = jogador === "X" ? "red" : "green"; 
         jogadas++;
 
         let classes = event.target.classList.value.split(" ");
@@ -215,7 +216,6 @@ function conferirResultado(classes) {
             document.getElementById('vencedor').innerText = "Jogador " + jogador + " venceu!!";
             removerEventosDosCampos();
 
-            // ✅ SWEETALERT2 VITÓRIA
             Swal.fire({
                 title: 'Vitória!',
                 text: 'Jogador ' + jogador + ' venceu!',
@@ -236,7 +236,6 @@ function verificarEmpate() {
         removerEventosDosCampos();
         document.getElementById('vencedor').innerText = "Deu velha!! Último a jogar: " + jogador;
 
-        // ✅ SWEETALERT2 EMPATE
         Swal.fire({
             title: 'Empate!',
             text: 'Deu velha!',
