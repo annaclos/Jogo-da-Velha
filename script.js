@@ -7,11 +7,11 @@
 //     O: 0
 // };
 
-// let ultimoVencedor = "X"; 
+// let ultimoVencedor = "X";
 
 // function iniciarJogo() {
 //     jogadas = 0;
-//     jogador = ultimoVencedor; 
+//     jogador = ultimoVencedor;
 //     document.querySelector("#jogadorDoTurno").textContent = jogador;
 //     document.getElementById("vencedor").innerText = "";
 
@@ -56,7 +56,7 @@
 
 // function marcarCampo(event) {
 //     if (event.target.textContent === "") {
-//         event.target.textContent = jogador;  
+//         event.target.textContent = jogador;
 //         jogadas++;
 
 //         let classes = event.target.classList.value.split(" ");
@@ -66,7 +66,7 @@
 //             }
 //         }
 
-     
+
 //         document.querySelector("#jogadorDoTurno").textContent = jogador;
 
 //         if (conferirResultado(classes)) return;
@@ -106,7 +106,7 @@
 //         removerEventosDosCampos();
 //         document.getElementById('vencedor').innerText = "Deu velha!! Último a jogar: " + jogador;
 
- 
+
 //         setTimeout(function () {
 //             alert("Deu velha!!");
 //         }, 50);
@@ -134,11 +134,11 @@ let vitorias = {
     O: 0
 };
 
-let ultimoVencedor = "X"; 
+let ultimoVencedor = "X";
 
 function iniciarJogo() {
     jogadas = 0;
-    jogador = ultimoVencedor; 
+    jogador = ultimoVencedor;
     document.querySelector("#jogadorDoTurno").textContent = jogador;
     document.getElementById("vencedor").innerText = "";
 
@@ -183,8 +183,8 @@ function removerEventosDosCampos() {
 
 function marcarCampo(event) {
     if (event.target.textContent === "") {
-        event.target.textContent = jogador; 
-        event.target.style.color = jogador === "X" ? "red" : "green"; 
+        event.target.textContent = jogador;
+        event.target.style.color = jogador === "X" ? "red" : "green";
         jogadas++;
 
         let classes = event.target.classList.value.split(" ");
@@ -255,6 +255,15 @@ function atualizarPlacar() {
     document.getElementById("vitoriasO").textContent = vitorias.O;
 }
 
-document.querySelector("#reiniciar").addEventListener("click", iniciarJogo);
+// document.querySelector("#reiniciar").addEventListener("click", iniciarJogo);
+document.querySelector("#reiniciar").addEventListener("click", function() {
+    vitorias = {
+        X: 0,
+        O: 0
+    };
+    atualizarPlacar();
+    iniciarJogo();
+});
+
 
 iniciarJogo();
